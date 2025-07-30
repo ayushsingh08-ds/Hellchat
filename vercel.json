@@ -20,10 +20,5 @@
     "PYTHONPATH": "/var/task",
     "PYTHONOPTIMIZE": "2",
     "PYTHONDONTWRITEBYTECODE": "1"
-  },
-  "functions": {
-    "backend/app.py": {
-      "memory": 512
-    }
   }
 }
