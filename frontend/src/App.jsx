@@ -5,6 +5,9 @@ import { getUserId } from './utils';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import uploadImg from "./assets/download.png";
 
+// API Base URL - uses environment variable in production, localhost in development
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+
 export default function App() {
     const [messages, setMessages] = useState([
         {
@@ -73,7 +76,7 @@ export default function App() {
           formData.append("file", file);
       
           axios
-            .post("http://localhost:8000/upload", formData, {
+            .post(`${API_BASE_URL}/upload`, formData, {
               headers: { "Content-Type": "multipart/form-data" },
               onUploadProgress: (progressEvent) => {
                 const percent = Math.round(
@@ -137,7 +140,7 @@ export default function App() {
         }
       
         try {
-          const res = await fetch("http://localhost:8000/query", {
+          const res = await fetch(`${API_BASE_URL}/query`, {
             method: "POST",
             body: formData,
           });
