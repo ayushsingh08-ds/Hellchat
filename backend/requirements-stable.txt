@@ -1,0 +1,21 @@
+# Ultra-stable requirements for Render deployment
+# These versions are guaranteed to work without Rust compilation
+
+# Core web framework - very stable versions
+fastapi==0.85.0
+uvicorn==0.18.3
+pydantic==1.9.2
+
+# Essential utilities - battle-tested versions  
+python-dotenv==0.19.0
+requests==2.27.1
+
+# Document processing - pure Python
+PyPDF2==2.10.3
+python-docx==0.8.10
+
+# File handling
+python-multipart==0.0.5
+
+# Async support
+anyio==3.6.2
