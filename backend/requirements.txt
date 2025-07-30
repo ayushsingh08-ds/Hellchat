@@ -1,0 +1,18 @@
+# Ultra-minimal requirements for 500MB RAM target
+# Total estimated size: ~80-120MB
+
+# Core web framework (minimal footprint)
+fastapi==0.104.1           # ~15MB
+uvicorn==0.24.0           # ~10MB  
+pydantic==2.5.0           # ~8MB
+
+# Essential utilities
+python-dotenv==1.1.1      # ~1MB
+requests==2.32.4          # ~5MB
+
+# Document processing (lightweight)
+PyPDF2==3.0.1            # ~2MB
+python-docx==1.2.0       # ~3MB
+
+# Optional monitoring (can be removed)
+# psutil==5.9.0           # ~5MB (only if you want memory monitoring)
